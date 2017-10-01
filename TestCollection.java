@@ -39,5 +39,33 @@ public class TestCollection {
 		a1.removeAll(c2);
 		System.out.println("A list of cities in a1:");
 		System.out.println(a1);
+
+
+		Iterator<String> iterator = c1.iterator();
+		while (iterator.hasNext()) {
+			System.out.println(iterator.next().toUpperCase());
+		}
+
+		for (String ele: c1) {
+			System.out.println(ele + ".");
+		}
+
+
+
+		ArrayList<String> list1 = new ArrayList<>();
+		list1.add("red");
+		list1.add("yellow");
+		list1.add("green");
+
+		ArrayList<String> list2 = new ArrayList<>();
+		list2.add("red");
+		list2.add("yellow");
+		list2.add("blue");
+
+		a1 = (ArrayList<String>) list1.clone();
+		//a1.addAll(list2);
+		// a1.add(list2);
+		a1.clear();
+		System.out.println(a1);
 	}
 }
